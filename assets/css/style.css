@@ -1,108 +1,90 @@
+/* Import the provided CSS */
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-size: .875rem;
-}
-
-.feather {
-  width: 16px;
-  height: 16px;
-  vertical-align: text-bottom;
-}
-
-/*
- * Sidebar
- */
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100; /* Behind the navbar */
-  padding: 48px 0 0; /* Height of navbar */
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 767.98px) {
-  .sidebar {
-    top: 5rem;
-  }
-}
-
-.sidebar-sticky {
-  position: relative;
-  top: 0;
-  height: calc(100vh - 48px);
-  padding-top: .5rem;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-.sidebar .nav-link {
-  font-weight: 500;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f6f8;
   color: #333;
 }
 
-.sidebar .nav-link.active {
-  color: #007bff;
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.sidebar-heading {
-  font-size: .75rem;
-  text-transform: uppercase;
+/* Header Styles */
+header {
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/*
- * Navbar
- */
-
-.navbar-brand {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  font-size: 1rem;
-  background-color: rgba(0, 0, 0, 0.25);
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25);
+header h1 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
 }
 
-.navbar .navbar-toggler {
-  top: .25rem;
-  right: 1rem;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
 }
 
-/*
- * Content
- */
-
-.main {
-  padding-top: 1.5rem;
+nav a {
+  text-decoration: none;
+  color: #34495e;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
 
-/*
- * Cards
- */
-.card {
-  margin-bottom: 1.5rem;
+nav a:hover {
+  background-color: #eee;
 }
 
-/*
- * Tables
- */
-.table th {
-  font-weight: 500;
+nav a.active {
+  background-color: #3498db;
+  color: #fff;
 }
 
-/*
- * Forms
- */
-.form-label {
-  font-weight: 500;
+.user-menu {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-/*
- * Utilities
- */
-.border-top {
-  border-top: 1px solid #e5e5e5;
+/* Main Content Styles */
+main {
+  flex: 1;
+  padding: 2rem;
 }
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+
+.dashboard-widgets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
+
+.widget {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.widget h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+/* Rest of the provided CSS... */
